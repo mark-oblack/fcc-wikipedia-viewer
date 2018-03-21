@@ -7,6 +7,9 @@
 
 $(document).ready(function() {
 	var input;
+	var api;
+
+
 	$(".search-button").click(function() {
 		input = document.getElementById("userSearch").value;
 		console.log(input);
