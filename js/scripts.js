@@ -7,11 +7,33 @@
 
 $(document).ready(function() {
 	var input;
-	var api;
+	var url;
 
-
-	$(".search-button").click(function() {
-		input = document.getElementById("userSearch").value;
-		console.log(input);
+	$(".search-button").click(function() { //click function initiates when user clicks Search
+		input = document.getElementById("userSearch").value; //value in input field is stored in variable
+		if(input==="" || input === " ") {
+			alert("Please enter search criteria.");
+		} else {
+			//value is placed in URL
+			url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + input + "&format=json&callback=?";
+			//ajax call to get json data
+			$.ajax({
+				type: "GET",
+				url: url,
+				async: false,
+				dataType: "json",
+				success: function(data) {
+					//resets output list to blank each time function is run or a new search is initiated
+					$(".results").html('');
+					//appends li to ul for each search result
+					for(var i = 0; i < data[0].length; i++) {
+						$(".results").append("<li><a href= \"" + data[3][i] + "\" target=\"_blank\">" + data[1][i] + "</a>" + "<p>" + data[2][i] + "</p></li>");
+					}
+				},
+				error: function(errorMessage) {
+					alert("Error! Please try entering different search criteria.");
+				}
+			});
+		}
 	});
 });
