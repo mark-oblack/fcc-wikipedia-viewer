@@ -1,6 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500');
+
 body, html {
+	background: #48dbfb;
+	color: #fff;
+	font-family: 'Cabin', sans-serif;
 	height: 100vh;
 	min-height: 100%;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 500;
+}
+
+input[type=button] {
+	border: 2px solid #fff;
+	border-radius: 35px;
+	background: #48dbfb;
+	color: #fff;
+	font-size: 1em;
+	margin: 0 5px;
+	padding: 10px 15px;
+}
+
+.button-container {
+	display: flex;
+	margin-top: 10px;
 }
 
 .wrapper {
