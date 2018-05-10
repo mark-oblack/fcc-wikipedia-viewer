@@ -27,7 +27,11 @@ $(document).ready(function() {
 					$(".results").html('');
 					//appends li to ul for each search result
 					for(var i = 0; i < data[0].length; i++) {
-						$(".results").append("<li><a href= \"" + data[3][i] + "\" target=\"_blank\">" + data[1][i] + "</a>" + "<p>" + data[2][i] + "</p></li>");
+						if(data[1][i] === undefined) {
+							$(".results").append("<li class='hide'></li>"); //hides any results that are undefined
+						} else {
+							$(".results").append("<li><a href= \"" + data[3][i] + "\" target=\"_blank\">" + data[1][i] + "</a>" + "<p>" + data[2][i] + "</p></li>");
+						}
 					}
 				},
 				error: function(errorMessage) {
