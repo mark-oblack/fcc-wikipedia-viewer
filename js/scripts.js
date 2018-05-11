@@ -31,6 +31,8 @@ $(document).ready(function() {
 							$(".results").append("<li class='hide'></li>"); //hides any results that are undefined
 						} else {
 							$(".results").append("<li><a href= \"" + data[3][i] + "\" target=\"_blank\">" + data[1][i] + "</a>" + "<p>" + data[2][i] + "</p></li>");
+							// $(".results").append("<a href= \"" + data[3][i] + "\" target=\"_blank\"><h2>" + data[1][i] + "</h2><li>" + "<p>" + data[2][i] + "</p></li></a>");
+
 						}
 					}
 				},
