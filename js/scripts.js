@@ -42,4 +42,10 @@ $(document).ready(function() {
 			});
 		}
 	});
+	//Allows a user to press Enter to search
+	$("#userSearch").keypress(function(e) {
+	    if (e.which == 13) {
+	    	$(".search-button").click();
+	    }
+	});
 });
