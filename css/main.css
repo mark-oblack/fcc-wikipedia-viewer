@@ -90,9 +90,8 @@ Search Results Styles
 	width: 90%;
 }
 
-.results li {
+/*.results li {
 	background: #dfe4ea;
-	/*border-radius: 5px;*/
 	margin: 10px 0;
 	padding: 10px;
 }
@@ -119,6 +118,34 @@ Search Results Styles
 	font-weight: 400;
 	line-height: 1.2em;
 	margin: 5px 0 10px 0;
+}*/
+
+.results a {
+	background: #dfe4ea;
+	display: block;
+	margin: 10px 0;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.results a:hover {
+	border-left: 8px solid #45aaf2;
+	transition: 0.1s ease;
+}
+
+.results h2 {
+	color: #45aaf2;
+	font-size: 1.25em;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.results p {
+	color: #4b4b4b;
+	font-weight: 400;
+	line-height: 1.2em;
+	margin: 5px 0 10px 0;
+	text-decoration: none;
 }
 
 
