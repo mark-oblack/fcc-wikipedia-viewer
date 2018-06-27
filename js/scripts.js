@@ -17,7 +17,6 @@ $(document).ready(function() {
 			$.ajax({
 				type: "GET",
 				url: url,
-				async: false,
 				dataType: "json",
 				success: function(data) {
 					//resets output list to blank each time function is run or a new search is initiated
