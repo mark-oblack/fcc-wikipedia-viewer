@@ -20,9 +20,10 @@ $(document).ready(function() {
 				dataType: "json",
 				success: function(data) {
 					//resets output list to blank each time function is run or a new search is initiated
+					console.log(data);
 					$(".results").html('');
 					//appends li to ul for each search result
-					for(var i = 0; i < data[0].length; i++) {
+					for(var i = 0; i < data[1].length; i++) {
 						if(data[1][i] === undefined) {
 							$(".results").append("<li class='hide'></li>"); //hides any results that are undefined
 						} else {
